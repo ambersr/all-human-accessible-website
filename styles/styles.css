@@ -1,0 +1,52 @@
+/* Main colors */
+:root {
+    --brown-text: #481B02;
+    --orange-button: #FF6B34;
+    --beige-background: #F8E9C1;
+    --white-main: #ffffff;
+    --green-background: #3C593D;
+}
+
+/* Alemeen */
+* {
+    box-sizing: border-box;
+    color: var(--brown-text);
+    margin: 0;
+    font-family: 'Poppins';
+    font-size: clamp(1rem, 0.9905rem + 0.0435vw, 1.03125rem);
+    line-height: 1.8rem;
+    scroll-behavior: smooth;
+}
+
+h2 {
+    font-size: clamp(1.8em, 5vw, 2.2em);
+    line-height: clamp(1.2rem, 2.5rem + 0.087vw, 13rem);
+    margin: 0px 0px 10px 0px;
+}
+
+h3 {
+    font-size: clamp(1.1em, 5vw, 1.4em);
+    line-height: clamp(1.2rem, 2rem + 0.087vw, 8rem);
+    margin: 0px 0px 10px 0px;
+}
+
+h4 {
+    font-size: clamp(0.9em, 5vw, 1.2em);
+    line-height: clamp(1.2rem, 2rem + 0.087vw, 8rem);
+    margin: 0px 0px 0px 0px;
+}
+
+a {
+    transition: ease-in-out .2s;
+}
+
+a:hover {
+    transition: ease-in-out .2s;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0;
+}
