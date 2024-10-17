@@ -290,3 +290,181 @@ a.btn-header:hover {
     background-color: var(--brown-text);
     transition: ease-in-out .2s;
 }
+
+/* Harry de mascotte header */
+.harry-header img {
+    margin-top: -80px;
+    margin-bottom: -65px;
+    margin-right: 20%;
+    width: 120px;
+}
+
+.harry-header {
+    display: flex;
+    flex-direction: row-reverse;
+    z-index: 1;
+}
+
+/* Blok met hoe het begon */
+section.begin {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--white-main);
+    padding: 3em 0em 0em 0em;
+    align-self: center;
+    width: 92%;
+    border-radius: 20px;
+    z-index: 4;
+    overflow: hidden;
+
+    @media screen and (min-width: 740px) {
+        width: 90%;
+        padding: 4em 0em 0em 0em;
+    }
+
+    @media screen and (min-width: 1000px) {
+        width: 82%;
+        padding: 4.7em 0em 0em 0em;
+    }
+
+    @media screen and (min-width: 1200px) {
+        width: 81%;
+    }
+}
+
+.begin-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+
+    @media screen and (min-width: 740px) {
+        align-self: center;
+        width: 70%;
+    }
+}
+
+.begin h2 {
+    text-align: left;
+    padding: 0em 1em 0em 1em;
+
+    @media screen and (min-width: 740px) {
+        margin-bottom: 0.5em;
+    }
+}
+
+.begin p {
+    text-align: left;
+    padding: 0em 2em 0em 2em;
+}
+
+.begin p.sup-titel {
+    text-align: left;
+
+    @media screen and (min-width: 740px) {
+        margin-bottom: 0.4em;
+    }
+}
+
+/* Button hoe het begon */
+a.btn-begin {
+    align-self: baseline;
+    background-color: var(--orange-button);
+    color: var(--white-main);
+    padding: 0.6em 1.3em;
+    border-radius: 100px;
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+    gap: 0.5em;
+    transition: ease-in-out .2s;
+    font-weight: 600;
+    align-items: center;
+    margin: 1.5em 2em 3em 2em;
+    font-size: 16px;
+
+    @media screen and (min-width: 740px) {
+        margin-bottom: 5em;
+    }
+}
+
+.btn-begin img {
+    align-items: center;
+}
+
+a.btn-begin:hover {
+    background-color: var(--brown-text);
+    transition: ease-in-out .2s;
+}
+
+figure.banner-img {
+    z-index: 3;
+}
+
+/* Banner afbeelding in hoe het begon */
+figure.banner-img img {
+    width: 100%;
+    height: 50vh;
+    border-radius: 20px;
+    object-fit: cover;
+    margin-bottom: -10px;
+    z-index: 1;
+
+    @media screen and (min-width: 740px) {
+        height: 40vh;
+    }
+
+    @media screen and (min-width: 1000px) {
+        height: 45vh;
+    }
+}
+
+/* Blad links */
+img.leave-left {
+    position: absolute;
+    left: 10%;
+    transform: translate(-45%, 0);
+    width: 230px;
+    z-index: 0;
+
+    @media screen and (min-width: 740px) {
+        width: 30%;
+    }
+
+    @media screen and (min-width: 1200px) {
+        width: 25%;
+    }
+}
+
+/* Blad rechts */
+img.leave-right {
+    position: absolute;
+    right: 0;
+    width: 200px;
+    margin-top: 300px;
+    z-index: 0;
+    display: none;
+
+    @media screen and (min-width: 740px) {
+        display: block;
+        width: 230px;
+        position: absolute;
+        right: 0;
+        margin-top: 100px;
+        translate: 50px, 50px;
+    }
+
+    @media screen and (min-width: 1000px) {
+        width: 330px;
+        position: absolute;
+        right: 0;
+        margin-top: 100px;
+    }
+
+    @media screen and (min-width: 1200px) {
+        width: 350px;
+        position: absolute;
+        right: 0;
+        margin-top: 50px;
+    }
+}
