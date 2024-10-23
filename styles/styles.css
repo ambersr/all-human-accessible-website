@@ -57,6 +57,26 @@ main {
     margin: 0;
 }
 
+.skiplink {
+     position: absolute;
+     left: -10000px;
+     top: auto;
+     z-index: 999;
+     padding: 1em;
+     background-color: var(--orange-button);
+     color: var(--white-main);
+     font-weight: 500;
+}
+
+.skiplink:focus {
+    left: 1em;
+    box-shadow: 0 0 0 3px var(--orange-button);
+}
+
+body {
+    position: relative;
+}
+
 /* Hier staat de navigatie menu Geveltuin */
 .nav-geveltuin {
     display: flex;
@@ -203,18 +223,6 @@ a.actief {
         padding: 8em 8em 8em 8em;
     }
 }
-
-/* section.header-geveltuin {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    z-index: 1;
-
-    @media screen and (min-width: 740px) {
-        justify-content: center;
-    }
-} */
-
 
 /* Section links */
 .section-1-links {
