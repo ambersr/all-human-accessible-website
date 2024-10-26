@@ -760,6 +760,11 @@ details[open] p {
     color: var(--brown-text);
 }
 
+/* Zorgt ervoor dat de standaard chevron verdwijnd */
+details summary::-webkit-details-marker {
+    display: none;
+}
+
 /* Blad links */
 .waarom img.leave-left {
     position: absolute;
