@@ -1,6 +1,5 @@
 # Platform Bieb in Bloei sprint 2
-
-In sprint 2 ben ik bezig geweest het de geveltuin pagina verder ontwikkelen. Daarbij heb ik voornamelijk gekeken naar hoe ik de geveltuinpagina voor elke gebruiker toegankelijk te maken. Daarbij heb ik gekeken naar gebruikers die blind zijn of een screenreader gebruiken om een website te navigeren.
+Tijdens sprint 2 heb ik me gericht op de verdere ontwikkeling van de geveltuinpagina. Daarbij lag mijn focus op het toegankelijk maken van de pagina voor elke gebruiker, met speciale aandacht voor gebruikers die blind zijn of een screenreader gebruiken om websites te navigeren. Hierbij heb ik verschillende technieken toegepast, zoals het verbeteren van de HTML-structuur, het toevoegen van beschrijvende alt-teksten en het optimaliseren van de navigatie voor screenreaders. Op deze manier wil ik ervoor zorgen dat de pagina voor iedereen toegankelijk en gebruiksvriendelijk is.
 
 #### Wie is Bieb in Bloei?
 Bieb in Bloei is onderdeel van Buurtcampus Oost. Dit is een sociale groene ontmoetingsplek waar plantenliefhebbers bij elkaar komen om actief deel te nemen aan vergroening van de omgeving van Amsterdam. Bieb in Bloei biedt verschillende diensten aan waaronder: Zaden- en stekjesbibliotheek, groene educatieve workshops over duurzaamheid, tuinieren en vergroening en geveltuin project waaarin je van alles leert over duurzaamheid, verzorging van stekjes en zaadjes.
@@ -18,24 +17,27 @@ Linkje naar de ontwikkelde Geveltuin pagina: [www.ambersr.github.io/all-human-ac
 
 ## Beschrijving
 ### Het ontwerp
-Het ontwerp is vrijwel hetzelfde gebleven. Het enige waar ik meegeëperimenteerd heb zijn de kleuren van de buttons. Tijdens de toegankelijkheid test ben ik erachter gekomen dat de buttons in combinatie met de tekstkleur niet goed genoeg contrast hebben. Bij een knop is het belangrijk dat deze goed opvalt voor de SEO maar daarentegen wel leesbaar is voor gebruikers met een visuele beperking en screenreader. Ik heb daarom de knop iets donkerder gemaakt. Op deze manier valt het nog steeds goed op en kunnen gebruikers met een visuele beperking de button goed lezen. 
+Het ontwerp is grotendeels hetzelfde gebleven. De enige aanpassing die ik heb doorgevoerd zijn de kleuren van de knoppen. Aan de hand van een toegankelijkheidstest heb ik ontdekt dat het contrast tussen de achtergrondskleur en de tekstkleur van de knoppen onvoldoende was. Dit contrast is belangrijk omdat de knop enerzijds goed moet opvallen voor SEO-doeleinden en anderzijds leesbaar moet zijn voor gebruikers met visuele beperkingen en voor degenen die screenreaders gebruiken. Om aan beide eisen te voldoen, heb ik de knoppen iets donkerder gemaakt. Zo blijven ze opvallend, terwijl gebruikers met een visuele beperking ze nu beter kunnen lezen.
 
-Knop kleur verandering:
+- Knop kleur verandering
 
+<img width="600" alt="image" src="https://github.com/user-attachments/assets/ec067554-d7c8-4c25-942d-c1fb23e99437">
 
 ### Het ontwikkelde platform
-In deze sprint heb ik de toegankelijkheid op de pagina verbeterd. Via de tab toets kan je de pagina goed goed navigeren. Ook heb ik een skiplink toegevoegd dit zorgt ervoor dat een gebruiker met de screenreader de navigatie over kan slaan en gelijk door naar de content kan gaan.
-
-Skiplink:
-
-Animatie
+Gebruikers met een beperking kunnen nu met de tab-toets eenvoudig door de website navigeren. Daarnaast heb ik een skiplink toegevoegd, zodat gebruikers die een screenreader gebruiken de navigatie kunnen overslaan en direct naar de hoofdinhoud kunnen gaan.
 
 ### Belangrijke features:
 - Skiplink (voor toegankelijkheid)
 
+Doormiddel van een skiplink kan een gebruiker met een een screenreader de navigatie items overslaan. Op deze manier hoeft een gebruiker die gebruik maakt van de tab functie niet de hele navigatie te doorlopen op een pagina.
+
+<img width="199" alt="image" src="https://github.com/user-attachments/assets/293be090-7a62-4db2-8c0f-6e66fb24a6ae">
 
 - Animatie Harry
 
+Harry komt te voorschijn en zwaait naar de bezoeker! Voor in het vervolg wil ik nog niets toevoegen van een pop up waarbij Harry kort iets uitlegt over de geveltuin.
+
+<img width="300" alt="image" src="https://github.com/user-attachments/assets/67caa593-7718-45e7-a213-7a9325f74fb5">
 
 ## Kenmerken
 ### Toegankelijkheid HTML
