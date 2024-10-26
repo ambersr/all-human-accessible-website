@@ -760,8 +760,13 @@ details[open] p {
     color: var(--brown-text);
 }
 
-/* Zorgt ervoor dat de standaard chevron verdwijnd */
-details summary::-webkit-details-marker {
+details>summary {
+    list-style: none;
+}
+
+details>summary::marker, /* Latest Chrome, Edge, Firefox */
+details>summary::-webkit-details-marker /* Safari */
+    {
     display: none;
 }
 
