@@ -18,7 +18,7 @@
     scroll-behavior: smooth;
 }
 
-:focus-visible {
+:focus-visible { /* wanneer een knop gefocust is dan krijgt hij een zichtbare rand */
     outline: none;
     box-shadow: 0 0 0 3px rgb(255, 77, 0);
 }
@@ -57,15 +57,16 @@ main {
     margin: 0;
 }
 
+/* Skiplink styling */
 .skiplink {
-     position: absolute;
-     left: -10000px;
-     top: auto;
-     z-index: 999;
-     padding: 1em;
-     background-color: var(--orange-button);
-     color: var(--white-main);
-     font-weight: 500;
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    z-index: 999;
+    padding: 1em;
+    background-color: var(--orange-button);
+    color: var(--white-main);
+    font-weight: 500;
 }
 
 .skiplink:focus {
@@ -77,7 +78,7 @@ body {
     position: relative;
 }
 
-/* Hier staat de navigatie menu Geveltuin */
+/* Hier staat de navigatie menu */
 .nav-geveltuin {
     display: flex;
     justify-content: space-between;
@@ -143,7 +144,7 @@ img.hamburger-icon {
     border: none;
 }
 
-/* Menu items */
+/* menu items */
 .nav-geveltuin ul {
     list-style-type: none;
     padding: 0;
@@ -195,11 +196,7 @@ img.hamburger-icon {
     color: var(--orange-button);
 }
 
-a.actief {
-    color: var(--orange-button) !important;
-}
-
-/* Header Geveltuin */
+/* header Geveltuin */
 .header-geveltuin {
     display: flex;
     flex-direction: column;
@@ -275,7 +272,8 @@ a.btn-header {
 
 a.btn-header:focus-visible {
     outline: none;
-    box-shadow: 0 0 0 3px #4dff00;
+    box-shadow: 0 0 0 4px #5f9861;
+    padding: auto;
 }
 
 .btn-header img {
@@ -332,6 +330,7 @@ img.leave-orange {
         width: 650px;
     }
 }
+
 .harry-header {
     display: flex;
     flex-direction: row-reverse;
@@ -339,6 +338,7 @@ img.leave-orange {
     animation: moveUpDown 12s ease-in-out infinite;
     /* Verlengde duur naar 12s */
     animation-delay: 3s;
+    position: relative;
 }
 
 .harry-header svg {
@@ -423,19 +423,6 @@ img.leave-orange {
         transform: rotate(0deg);
     }
 }
-/* 
-.text-balloon {
-    position: fixed;
-    right: 32%;
-    margin-top: -50px;
-    background-color: var(--orange-button);
-    padding: 2em 3em;
-    border-radius: 200px;
-    border: 0.5em solid var(--orange-button);
-}
- */
-
-
 
 /* Blok met hoe het begon */
 section.begin {
@@ -522,7 +509,7 @@ a.btn-begin {
 
 a.btn-begin:focus-visible {
     outline: none;
-    box-shadow: 0 0 0 3px #4dff00;
+    box-shadow: 0 0 0 3px #5f9861;
 }
 
 .btn-begin img {
@@ -534,10 +521,6 @@ a.btn-begin:hover {
     transition: ease-in-out .2s;
 }
 
-figure.banner-img {
-    z-index: 3;
-}
-
 /* Banner afbeelding in hoe het begon */
 figure.banner-img img {
     width: 100%;
@@ -546,6 +529,7 @@ figure.banner-img img {
     object-fit: cover;
     margin-bottom: -10px;
     z-index: 1;
+    position: relative;
 
     @media screen and (min-width: 740px) {
         height: 40vh;
@@ -606,7 +590,7 @@ img.leave-right {
     }
 }
 
-/* Hier staat de code van het 'waarom' */
+/* Hier staat de code van het stuk 'waarom' */
 .waarom {
     display: flex;
     flex-direction: column;
@@ -632,6 +616,7 @@ img.leave-right {
     }
 }
 
+/* Links waarom */
 .waarom h2 {
     color: var(--beige-background);
 }
@@ -654,6 +639,7 @@ img.leave-right {
     }
 }
 
+/* Button waarom */
 a.btn-waarom {
     align-self: baseline;
     background-color: var(--orange-button);
@@ -680,15 +666,57 @@ a.btn-waarom:hover {
     transition: ease-in-out .2s;
 }
 
+/* Rechts waarom */
+.waarom-rechts {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    z-index: 10;
+
+
+    @media screen and (min-width: 740px) {
+        width: 50%;
+        z-index: 99;
+    }
+}
+
+/* Harry de mascotte in 'waarom' */
+.waarom-rechts .harry-header {
+    display: flex;
+    flex-direction: row-reverse;
+    animation: moveUpDown 12s ease-in-out infinite;
+    /* Verlengde duur naar 12s */
+    animation-delay: 3s;
+}
+
+.waarom-rechts .harry-header svg {
+    margin-top: -80px;
+    margin-bottom: -65px;
+    margin-right: 0%;
+    width: 120px;
+
+    @media screen and (min-width: 740px) {
+        margin-right: 20%;
+    }
+}
+
+/* Hand zwaaien Harry */
+#hand-2 {
+    transform-origin: 60% 50%;
+    animation: handWave 12s ease-in-out infinite;
+    animation-delay: 3s;
+}
+
 /* Hier komt de accordion */
 .accordion-card {
     background-color: var(--beige-background);
     padding: 2em;
     border-radius: 20px;
     z-index: 1;
+    width: 100%;
 
     @media screen and (min-width: 740px) {
-        width: 50%;
+        width: 100%;
     }
 }
 
@@ -709,24 +737,22 @@ summary {
     color: #5c4233;
 }
 
-summary::after {
-    content: "+";
+summary::after { /* voegt + teken toe na de inhoud van de summary */
+    content: "+"; 
     font-size: 1.2rem;
     font-weight: bold;
     margin-left: auto;
     transition: transform 0.3s ease;
 }
 
-summary:focus-visible {
+summary:focus-visible { 
     outline: none;
-    box-shadow: 0 0 0 3px rgb(253, 71, 10);
-    /* Focus wanneer je via tab de summary opent */
+    box-shadow: 0 0 0 3px rgb(253, 71, 10); /* Wanneer focus border zichtbaar wanneer je via tab de summary opent */
 }
 
-details[open] summary::after {
+details[open] summary::after { /* voegt - teken toe wanneer details wordt geopend */
     content: "-";
-    transform: rotate(180deg);
-    /* Draai het minteken */
+    transform: rotate(180deg); /* Draai het minteken */
 }
 
 details[open] p {
@@ -734,7 +760,7 @@ details[open] p {
     color: var(--brown-text);
 }
 
-/* leave left */
+/* Blad links */
 .waarom img.leave-left {
     position: absolute;
     right: 0;
@@ -762,7 +788,7 @@ details[open] p {
     }
 }
 
-/* leave right */
+/* Blad rechts */
 .waarom img.leave-right {
     position: absolute;
     right: 0;
@@ -802,6 +828,7 @@ details[open] p {
     border-radius: 20px;
     z-index: 1;
     justify-content: center;
+    overflow: hidden; /* zorgt ervoor dat harry niet buiten het scherm valt */
 
     @media screen and (min-width: 740px) {
         padding: 4em 3em 7em 3em;
@@ -826,7 +853,7 @@ details[open] p {
     align-self: center;
     text-align: center;
     padding: 0em 0em 0.5em 0em;
-    z-index: 2;
+    z-index: 1;
 
     @media screen and (min-width: 740px) {
         padding: 0.7em 0em 0.8em 0em;
@@ -855,6 +882,118 @@ details[open] p {
 }
 
 /* Blok links */
+.aanmelden-harry .left {
+    width: 100%;
+    overflow: hidden;
+}
+
+.aanmelden-harry .harry-header {
+    display: flex;
+    flex-direction: row-reverse;
+    animation: moveLeftRight 12s ease-in-out infinite; /* Animatieduur 12s */
+    animation-delay: 3s; /* wacht 3s en laat dan de animatie beginnen */
+    z-index: 3;
+    position: relative;
+
+    @media screen and (min-width: 740px) {
+        z-index: 0;
+    }
+}
+
+.aanmelden-harry .harry-header svg {
+    margin-top: -80px;
+    margin-bottom: -75px;
+    margin-right: -13%;
+    width: 120px;
+    transform: rotate(-38deg); 
+
+    @media screen and (min-width: 740px) {
+        margin-right: 60%;
+        transform: rotate(0deg);
+    }
+}
+
+
+@keyframes moveLeftRight {
+    0% {
+        transform: translateX(0);
+    }
+
+    3% {
+        transform: translateX(30px);
+        transform: rotate(-22deg);
+        transform-origin: 280px 0px;
+    }
+
+    40% {
+        transform: translateX(30px);
+        transform: rotate(-22deg);
+        transform-origin: 280px 0px;
+    }
+
+    45% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@media screen and (min-width: 740px) {
+    @keyframes moveLeftRight {
+        0% {
+            transform: translateY(0);
+        }
+
+        3% {
+            transform: translateY(-30px);
+        }
+
+        40% {
+            transform: translateY(-30px);
+        }
+
+        45% {
+            transform: translateY(0);
+        }
+
+        100% {
+            transform: translateY(0);
+        }
+    }
+}
+
+/* Hand zwaaien Harry */
+#hand-3 {
+    transform-origin: 60% 50%;
+    animation: handWave 12s ease-in-out infinite;
+    animation-delay: 3s;
+}
+
+.left {
+    z-index: 0;
+}
+
+/* Hier komt de accordion */
+.accordion-card {
+    background-color: var(--beige-background);
+    padding: 2em;
+    border-radius: 20px;
+    z-index: 6;
+    width: 100%;
+
+    @media screen and (min-width: 740px) {
+        width: 100%;
+    }
+}
+
+.aanmelden .left {
+    z-index: 2;
+    position: relative;
+}
+
+
 .left {
     background-color: var(--beige-background);
     padding: 2em;
@@ -880,6 +1019,7 @@ details[open] p {
     color: #4F4136;
 }
 
+/* Button aanmeldformulier */
 input#form-button {
     width: fit-content;
     background-color: var(--orange-button);
@@ -899,7 +1039,7 @@ input#form-button {
 
 input#form-button:focus-visible {
     outline: none;
-    box-shadow: 0 0 0 3px #4dff00;
+    box-shadow: 0 0 0 3px #68c06b; 
 }
 
 input#form-button:hover {
@@ -916,7 +1056,8 @@ form {
     gap: 20px;
 
     @media screen and (min-width: 1000px) {
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+        padding-bottom: 45px;
     }
 
     @media screen and (min-width: 1600px) {
@@ -1065,6 +1206,7 @@ footer {
     }
 }
 
+/* Logo Bieb in Bloei */
 footer figure {
     display: flex;
     flex-direction: column;
@@ -1075,6 +1217,7 @@ footer figure {
     }
 }
 
+/* Menu items */
 .menu ul {
     list-style-type: none;
     padding: 0em 1em 0em 0em;
