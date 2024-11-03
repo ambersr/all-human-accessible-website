@@ -29,6 +29,9 @@ main {
     margin: 0;
 }
 
+::selection { /* wanneer je een element selecteert wordt de achtergrond feloranje */
+    background-color:#ff703c;
+}
 
 :focus-visible { /* wanneer een knop gefocust is dan krijgt hij een zichtbare oranje rand */
     outline: none;
