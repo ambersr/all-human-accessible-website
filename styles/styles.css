@@ -13,12 +13,24 @@
     color: var(--brown-text);
     margin: 0;
     font-family: 'Poppins';
-    font-size: clamp(1rem, 0.9905rem + 0.0435vw, 1.03125rem);
+    font-size: clamp(1rem, 0.9905rem + 0.0435vw, 1.03125rem); /* De clamp heeft een min, standaard en max waarde. Op deze manier gaat fontsiz reponsive mee */
     line-height: 1.8rem;
-    scroll-behavior: smooth;
+    scroll-behavior: smooth; /* zorgt ervoor dat anchor links smooth scrollen */
 }
 
-:focus-visible { /* wanneer een knop gefocust is dan krijgt hij een zichtbare rand */
+body {
+    position: relative;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0;
+}
+
+
+:focus-visible { /* wanneer een knop gefocust is dan krijgt hij een zichtbare oranje rand */
     outline: none;
     box-shadow: 0 0 0 3px rgb(255, 77, 0);
 }
@@ -50,19 +62,12 @@ a:hover {
     transition: ease-in-out .2s;
 }
 
-main {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin: 0;
-}
-
 /* Skiplink styling */
 .skiplink {
     position: absolute;
-    left: -10000px;
-    top: auto;
-    z-index: 999;
+    left: -300px; /* skiplink wordt uit het zicht naar links verplaatst */
+    top: 0;
+    z-index: 100;
     padding: 1em;
     background-color: var(--orange-button);
     color: var(--white-main);
@@ -72,10 +77,6 @@ main {
 .skiplink:focus {
     left: 1em;
     box-shadow: 0 0 0 3px var(--orange-button);
-}
-
-body {
-    position: relative;
 }
 
 /* Hier staat de navigatie menu */
@@ -92,15 +93,15 @@ body {
     overflow: hidden;
     z-index: 99;
 
-    @media (width > 820px) {
+     @media screen and (min-width: 820px) {
         padding: 10px 3em;
     }
 
-    @media (width > 1000px) {
+     @media screen and (min-width: 1000px) {
         padding: 10px 6.5em;
     }
 
-    @media (width > 1200px) {
+     @media screen and (min-width: 1200px) {
         padding: 10px 8em;
     }
 }
@@ -117,7 +118,7 @@ body {
     z-index: 1;
     display: block;
 
-    @media (width > 820px) {
+     @media screen and (min-width: 820px) {
         width: 5em;
     }
 }
@@ -126,11 +127,11 @@ body {
 .checkbtn {
     color: white;
     cursor: pointer;
-    display: block;
+    display: block; /* checkbtn vult volledige breedte  */
     position: absolute;
     right: 15px;
 
-    @media (width > 820px) {
+     @media screen and (min-width: 820px) {
         display: none;
     }
 }
@@ -147,7 +148,7 @@ img.hamburger-icon {
 /* menu items */
 .nav-geveltuin ul {
     list-style-type: none;
-    padding: 0;
+    padding: 0 0 100px 0;
     margin: 0;
     position: fixed;
     top: 80px;
@@ -162,12 +163,11 @@ img.hamburger-icon {
     align-items: center;
     gap: 30px;
     transition: all 0.3s;
-    padding-bottom: 100px;
 
-    @media (width > 820px) {
+     @media screen and (min-width: 820px) {
         position: static;
-        width: unset;
-        height: unset;
+        width: unset; /* width gereset naar eigen waarde */
+        height: unset; /* height gereset naar eigen waarde */
         translate: 0;
         flex-direction: row;
         gap: 60px;
@@ -299,7 +299,7 @@ a.btn-header:hover {
     width: 100%;
     height: 400px;
     border-radius: 20px;
-    object-fit: cover;
+    object-fit: cover; /* zorgt ervoor dat de afbeelding het object vult */
 
     @media screen and (min-width: 740px) {
         height: 28em;
@@ -331,12 +331,12 @@ img.leave-orange {
     }
 }
 
+/* Animatie harry */
 .harry-header {
     display: flex;
     flex-direction: row-reverse;
     z-index: 1;
-    animation: moveUpDown 12s ease-in-out infinite;
-    /* Verlengde duur naar 12s */
+    animation: moveUpDown 12s ease-in-out infinite; /* Duur animatie 12s oneindig */
     animation-delay: 3s;
     position: relative;
 }
@@ -424,7 +424,7 @@ img.leave-orange {
     }
 }
 
-/* Blok met hoe het begon */
+/* Sectie 2 */
 section.begin {
     display: flex;
     flex-direction: column;
@@ -485,7 +485,7 @@ section.begin {
     }
 }
 
-/* Button hoe het begon */
+/* Button sectie 2 */
 a.btn-begin {
     align-self: baseline;
     background-color: var(--orange-button);
@@ -521,7 +521,7 @@ a.btn-begin:hover {
     transition: ease-in-out .2s;
 }
 
-/* Banner afbeelding in hoe het begon */
+/* Banner afbeelding sectie 2 */
 figure.banner-img img {
     width: 100%;
     height: 50vh;
@@ -529,7 +529,7 @@ figure.banner-img img {
     object-fit: cover;
     margin-bottom: -10px;
     z-index: 1;
-    position: relative;
+    position: relative; /* zorgt ervoor dat de z-index werkt */
 
     @media screen and (min-width: 740px) {
         height: 40vh;
@@ -590,7 +590,7 @@ img.leave-right {
     }
 }
 
-/* Hier staat de code van het stuk 'waarom' */
+/* Hier staat de code van sectie 3 */
 .waarom {
     display: flex;
     flex-direction: column;
@@ -616,7 +616,7 @@ img.leave-right {
     }
 }
 
-/* Links waarom */
+/* Links sectie 3 */
 .waarom h2 {
     color: var(--beige-background);
 }
@@ -639,7 +639,7 @@ img.leave-right {
     }
 }
 
-/* Button waarom */
+/* Button sectie 3 */
 a.btn-waarom {
     align-self: baseline;
     background-color: var(--orange-button);
@@ -666,7 +666,7 @@ a.btn-waarom:hover {
     transition: ease-in-out .2s;
 }
 
-/* Rechts waarom */
+/* Rechts sectie 3 */
 .waarom-rechts {
     display: flex;
     flex-direction: column;
@@ -680,12 +680,11 @@ a.btn-waarom:hover {
     }
 }
 
-/* Harry de mascotte in 'waarom' */
+/* Harry de mascotte in sectie 3 */
 .waarom-rechts .harry-header {
     display: flex;
     flex-direction: row-reverse;
-    animation: moveUpDown 12s ease-in-out infinite;
-    /* Verlengde duur naar 12s */
+    animation: moveUpDown 12s ease-in-out infinite; /* animatie duurt 12s oneindig */
     animation-delay: 3s;
 }
 
@@ -707,7 +706,7 @@ a.btn-waarom:hover {
     animation-delay: 3s;
 }
 
-/* Hier komt de accordion */
+/* Styling accordion */
 .accordion-card {
     background-color: var(--beige-background);
     padding: 2em;
@@ -737,7 +736,7 @@ summary {
     color: #5c4233;
 }
 
-summary::after { /* voegt + teken toe na de inhoud van de summary */
+summary::after { /* voegt + teken toe achter de inhoud van de summary */
     content: "+"; 
     font-size: 1.2rem;
     font-weight: bold;
@@ -764,8 +763,8 @@ details>summary {
     list-style: none;
 }
 
-details>summary::marker, /* Latest Chrome, Edge, Firefox */
-details>summary::-webkit-details-marker /* Safari */
+details>summary::marker, /* Zorgt ervoor dat de standaard marker uitgezet wordt in de browsers: Chrome, Edge, Firefox */
+details>summary::-webkit-details-marker /* Zorgt ervoor dat de standaard marker uitgezet wordt in de browser Safari */
     {
     display: none;
 }
@@ -829,7 +828,7 @@ details>summary::-webkit-details-marker /* Safari */
     }
 }
 
-/* Hier begint 'Waarom meedoen' */
+/* Hier begint sectie 4 */
 .aanmelden {
     display: flex;
     flex-direction: column;
@@ -900,7 +899,7 @@ details>summary::-webkit-details-marker /* Safari */
 .aanmelden-harry .harry-header {
     display: flex;
     flex-direction: row-reverse;
-    animation: moveLeftRight 12s ease-in-out infinite; /* Animatieduur 12s */
+    animation: moveLeftRight 12s ease-in-out infinite; /* Animatieduur 12s en oneindig */
     animation-delay: 3s; /* wacht 3s en laat dan de animatie beginnen */
     z-index: 3;
     position: relative;
@@ -922,7 +921,6 @@ details>summary::-webkit-details-marker /* Safari */
         transform: rotate(0deg);
     }
 }
-
 
 @keyframes moveLeftRight {
     0% {
@@ -998,13 +996,9 @@ details>summary::-webkit-details-marker /* Safari */
     }
 }
 
-.aanmelden .left {
+.left {
     z-index: 2;
     position: relative;
-}
-
-
-.left {
     background-color: var(--beige-background);
     padding: 2em;
     border-radius: 15px;
@@ -1018,6 +1012,21 @@ details>summary::-webkit-details-marker /* Safari */
     height: 1px;
     background-color: var(--brown-text);
     margin: 1.5em 0em 1.5em 0em;
+}
+
+/* Aanmeldformulier */
+form {
+    display: grid;
+    gap: 20px;
+
+    @media screen and (min-width: 1000px) {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        padding-bottom: 45px;
+    }
+
+    @media screen and (min-width: 1600px) {
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    }
 }
 
 .left input {
@@ -1059,20 +1068,6 @@ input#form-button:hover {
 
 input::placeholder {
     color: var(--brown-text);
-}
-
-form {
-    display: grid;
-    gap: 20px;
-
-    @media screen and (min-width: 1000px) {
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
-        padding-bottom: 45px;
-    }
-
-    @media screen and (min-width: 1600px) {
-        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    }
 }
 
 /* Blok rechts */
