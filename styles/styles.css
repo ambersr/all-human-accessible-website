@@ -13,7 +13,7 @@
     color: var(--brown-text);
     margin: 0;
     font-family: 'Poppins';
-    font-size: clamp(1rem, 0.9905rem + 0.0435vw, 1.03125rem); /* De clamp heeft een min, standaard en max waarde. Op deze manier gaat fontsiz reponsive mee */
+    font-size: clamp(1rem, 0.9905rem + 0.0435vw, 1.03125rem); /* De clamp heeft een min, standaard en max waarde. Op deze manier gaat fontsize reponsive mee */
     line-height: 1.8rem;
     scroll-behavior: smooth; /* zorgt ervoor dat anchor links smooth scrollen */
 }
